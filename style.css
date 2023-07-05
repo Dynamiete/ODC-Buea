@@ -1,0 +1,155 @@
+:root{
+    --primary: black;
+    --secondary: Orange;
+    --textcolor: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+/* navbar */
+.navbar{
+    background-color: var(--primary);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--textcolor);
+    text-decoration: none;
+}
+.navbar h1{
+    color: var(--textcolor);
+}
+.navbar li{
+    list-style: none;
+    margin-left: 3rem;
+}
+a {
+    color: var(--textcolor);
+    text-decoration: none;
+}
+
+ul{
+    display: flex;
+}
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar span, .active, .navbar a:hover{
+    color: var(--secondary);
+}
+/* end nav */
+/* intro start */
+.intro{
+    background-color: var(--secondary);
+    height: 350px;
+    display: flex;
+    text-align: center;
+    text-transform: capitalize;
+}
+.intro h1, .intro p {
+    margin-bottom: 1rem;
+}
+.intro h1 {
+    font-size: 30px;
+}
+.intro p {
+    font-size: 20px;
+    font-weight: 600;
+}
+.intro a{
+    background: var(--primary);
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 25px;
+}
+.intro a:hover{
+    opacity: 0.8;
+    background: var(--textcolor);
+    color: var(--primary);
+    font-weight: 600;
+    border-radius: 25px;
+}
+/* intro end */
+/* about start */
+.about .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.about img{
+    width: 100%;
+}
+.about {
+    margin-top: 2rem;
+}
+.sectitle{
+    text-transform: capitalize;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+.sectitle h1{
+    display: inline-block;
+    padding-bottom: 0.2 rem;
+    border-bottom: 3px solid var(--secondary);
+    font-size: 30px;
+}
+.about .right{
+    width: auto;
+    height: 450px;
+    padding: 30px;
+    background: url(imgage/3drocket.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: rocket 3s infinite;
+}
+@keyframes rocket{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/* aboutend */
+/* footer */
+footer{
+    background-color: var(--primary);
+    color: var(--textcolor);
+    padding: 1rem 0;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 1rem;
+}
+/* footer end */
+/* responsiveness */
+@media(max-width: 991px){
+    .navbar .container{
+        display: block;
+        text-align: center;
+    }
+    .navbar h1{
+        margin-bottom: 1rem;
+    }
+    .intro h1{
+        font-size: 25px;
+    }
+    .intro p{
+        font-size: 15px;
+    }
+    .intro a{
+        padding: 0.5rem;
+        text-align: center;
+    }
+    .about .container{
+        display: block;
+    }
+}
